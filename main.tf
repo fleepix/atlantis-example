@@ -1,3 +1,6 @@
+provider "aws" {
+}
+
 resource "aws_key_pair" "admin" {
   key_name = "admin-key"
   public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDKXIS+YB8CJf/4ZkVmaWgvR25FqwminmOy0gMTZqvhyubiyejXjhKerMaCILbLDHDdrxtr7usaJ9KtM5Ukw1xM145xQADlWpep53cDNYyCeajXWjDUaiu9TIDNVlFM/X+/34HdEU1eSJ0Cc3YWY0X6WjFkri4+D7mR9vXsZZxhxlqI1HlE+9OrItsOSFYCGZADYBiX5uK9Dk19wB8HSu9CMU1BCiBojZ2/BSrl/n4MkwmyMymJvkr4rKOIB0LMLGogLN39Y98y9F1WKF7BDGOiOmRcuRal3IUKFu+7h9PIhRsMBEA3Q7ADHsMzzoh1M16AMbaXApGVuHfEGll4YD5T salimzia@nl1mcl-506767"
