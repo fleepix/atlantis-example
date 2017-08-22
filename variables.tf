@@ -1,3 +1,8 @@
+variable "region" {
+  description = "AWS region"
+  default = "eu-central-1"
+}
+
 variable "server_port" {
   description = "The port for HTTP server"
   default = 8080
