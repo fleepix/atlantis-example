@@ -1,5 +1,23 @@
+terraform {
+  backend "s3" {
+    bucket = "terraform-state-bucket-test"
+    key = "default/terraform.tfstate"
+    region = "eu-central-1"
+    dynamodb_table = "terraform-lock"
+  }
+}
+
 provider "aws" {
   region = "${var.region}"
+}
+
+data "terraform_remote_state" "default" {
+  backend = "s3"
+  config {
+    bucket = "terraform-state-bucket-test"
+    key = "default/terraform.tfstate"
+    region = "${var.region}"
+  }
 }
 
 resource "aws_key_pair" "admin" {
